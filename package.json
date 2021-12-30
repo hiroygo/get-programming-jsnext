@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/hiroygo/get-programming-jsnext/issues"
   },
-  "homepage": "https://github.com/hiroygo/get-programming-jsnext#readme"
+  "homepage": "https://github.com/hiroygo/get-programming-jsnext#readme",
+  "type": "module"
 }

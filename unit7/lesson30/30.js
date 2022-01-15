@@ -25,13 +25,14 @@ const promise2 = new Promise((resolve, reject) => { reject(); })
 const promise3 = new Promise((resolve, reject) => { resolve(); }).then(() => console.log("hello"));
 promise3.then().then().then();
 
-// then() に渡す関数が返す値は何であっても、次の then() に渡される
+// # then() に渡す関数が返す値は何であっても、次の then() に渡される
 Promise.resolve(1)
     .then(n => n + 1) // 1 + 1 = 2
     .then(n => n + 1) // 2 + 1 = 3
     .then(n => console.log(n)); // 3
 
-// ただし、then() に渡す関数が Promise オブジェクトを返す場合
+// # ただし
+// then() に渡す関数が Promise オブジェクトを返す場合
 // その then() から返される Promise は値が解決または拒否されるまで待機する
 function wait(ms) {
     return new Promise((resolve, reject) => {
